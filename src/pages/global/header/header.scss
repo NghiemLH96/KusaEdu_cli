@@ -40,7 +40,7 @@ header{
                     bottom: -3px;
                     width: 70%;
                     border-bottom: 2px solid #ffffff;
-                    transition: all 1s;
+                    transition: all 0.5s;
                     transform: translateY(5px);
                     opacity: 0;
                     &.active{
@@ -55,12 +55,16 @@ header{
                     }
                 }
                 .subMenu{
-                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
                     position: absolute;
                     top: 140%;
                     left: -55%;
                     &.active{
-                        display: block;
+                        opacity: 1;
+                        visibility: visible;
+                        transition: opacity 0.5s ease-in-out;
                     }
                     .subMenu__container{
                         display: grid;
@@ -72,10 +76,10 @@ header{
                         width: fit-content;
                         border-radius: 20px;
                         padding: 25px;
-                        transition: all 1s;
+                        transition: all 0.5s;
                         .subMenu__item{
                             text-wrap: nowrap;
-                            transition: all 1s;
+                            transition: all 0.5s;
                             &:hover{
                                 color: rgb(200, 151, 200);
                             }
