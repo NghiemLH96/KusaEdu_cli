@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+$navFont: "Rampart One", sans-serif;
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.298);
+    z-index: 3;
+    .logo{
+        width: fit-content;
+        height: 100%;
+    }
+    nav{
+        height: 100%;
+        width: 30%;
+        .linkList{
+            font-family: $navFont;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            list-style-type: none;
+            font-size: 25px;
+            font-weight: 700;
+            margin: 0px 40px;
+            position: relative;
+            left: -100px;
+            .linkItem{
+                position: relative;
+                text-align: center;
+                cursor: pointer;
+                .linkItem__line{
+                    position: absolute;
+                    left: 15%;
+                    bottom: -3px;
+                    width: 70%;
+                    border-bottom: 2px solid #ffffff;
+                    transition: all 1s;
+                    transform: translateY(5px);
+                    opacity: 0;
+                    &.active{
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                &:hover{
+                    .linkItem__line{
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                .subMenu{
+                    display: none;
+                    position: absolute;
+                    top: 140%;
+                    left: -55%;
+                    &.active{
+                        display: block;
+                    }
+                    .subMenu__container{
+                        display: grid;
+                        grid-template-columns:  1fr 1fr ;
+                        column-gap: 25px;
+                        row-gap: 15px;
+                        list-style-type: none;
+                        background-color: rgba(0, 0, 0, 0.474);
+                        width: fit-content;
+                        border-radius: 20px;
+                        padding: 25px;
+                        transition: all 1s;
+                        .subMenu__item{
+                            text-wrap: nowrap;
+                            transition: all 1s;
+                            &:hover{
+                                color: rgb(200, 151, 200);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
