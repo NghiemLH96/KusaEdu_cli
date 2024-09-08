@@ -22,17 +22,22 @@ header{
             font-family: $navFont;
             display: flex;
             align-items: center;
-            width: 100%;
+            width: fit-content;
             height: 100%;
             list-style-type: none;
             font-size: 25px;
             font-weight: 700;
-            margin: 0px 40px;
+            margin: 0px 60px;
+            column-gap: 20px;
             position: relative;
             left: -100px;
+            hr{
+                height: 30%;
+            }
             .linkItem{
                 position: relative;
                 text-align: center;
+                text-wrap: nowrap;
                 cursor: pointer;
                 .linkItem__line{
                     position: absolute;

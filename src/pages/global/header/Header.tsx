@@ -1,35 +1,8 @@
 import { useState } from "react"
 import "./header.scss"
-import { Button, Dropdown, MenuProps, Space } from "antd"
 
 export default function Header() {
     const [activeSM, setActiveSM] = useState(0)
-    const items: MenuProps['items'] = [
-        {
-          key: '1',
-          label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-              1st menu item
-            </a>
-          ),
-        },
-        {
-          key: '2',
-          label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-              2nd menu item
-            </a>
-          ),
-        },
-        {
-          key: '3',
-          label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-              3rd menu item
-            </a>
-          ),
-        },
-      ];
 
     return (
         <header>
@@ -50,9 +23,10 @@ export default function Header() {
                             </ul>
                         </div>
                     </li>
+                    <hr />
                     <li className={activeSM == 2 ? "linkItem active" : "linkItem"} onClick={() => { activeSM == 2 ? setActiveSM(0) : setActiveSM(2) }}>
                         <span className={activeSM == 2 ? "linkItem__line active" : "linkItem__line"}></span>
-                        教材
+                        Tài liệu
                         <div className={activeSM == 2 ? "subMenu active" : "subMenu"}>
                             <ul className="subMenu__container">
                                 <li className="subMenu__item">N1</li>
@@ -64,9 +38,10 @@ export default function Header() {
                             </ul>
                         </div>
                     </li>
+                    <hr />
                     <li className={activeSM == 3 ? "linkItem active" : "linkItem"} onClick={() => { activeSM == 3 ? setActiveSM(0) : setActiveSM(3) }}>
                         <span className={activeSM == 3 ? "linkItem__line active" : "linkItem__line"}></span>
-                        試験
+                        Thi Thử
                         <div className={activeSM == 3 ? "subMenu active" : "subMenu"}>
                             <ul className="subMenu__container">
                                 <li className="subMenu__item">N1 試験</li>
@@ -78,6 +53,7 @@ export default function Header() {
                             </ul>
                         </div>
                     </li>
+                    <hr />
                     <li className="linkItem">
                         <span className="linkItem__line"></span>
                         Kusa

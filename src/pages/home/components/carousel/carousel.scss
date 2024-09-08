@@ -1,10 +1,58 @@
 .carousel__container{
     width: 100%;
     height: 550px;
+    overflow: hidden;
     background-color: #eee;
     .carousel__slide{
         width: 100%;
         height: 100%;
+        position: relative;
+        .carousel__contentBox{
+            z-index: 2;
+            position: absolute;
+            color: #FFFFFF;
+            background-color: rgba(20, 20, 20, 0.443);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            width: 40%;
+            height: fit-content;
+            border-radius: 10px;
+            .carousel__title{
+                font-size: 30px;
+            }
+            .carousel__content{
+                font-size: 20px;
+            }
+            &.left{
+                top: 25%;
+                left: 100px;
+            }
+            hr{
+                width: 100%;
+            }
+            button{
+                width: fit-content;
+                height: fit-content;
+                padding: 15px 20px;
+                margin: 10px;
+                border: none;
+                border-radius: 25px;
+                font-size: 17px;
+                box-shadow: 1px 5px 5px #987235;
+                background: linear-gradient(100deg,  #d4a862,#987235 );
+                background-size: 250% 100%;
+                background-position: 100% 0;
+                transition: all .5s;
+                cursor: pointer;
+                color: #ffffff;
+                &:hover{
+                    background-position: 0 0;
+                }
+            }
+        }
         img{
             width: 100%;
             height: 100%;

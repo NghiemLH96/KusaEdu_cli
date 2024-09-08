@@ -1,0 +1,42 @@
+.textCarousel__container{
+    padding: 10px 0;
+    background-color:#dad8d8;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+    .textList_container{
+        display: flex;
+        width: fit-content;
+        list-style-type: none;
+        animation: textScroll 30s infinite linear;
+        .scrollingText{
+            white-space: nowrap;
+            padding: 0 30px;
+            line-height: 30px;
+            &::before{
+                content: url("../../../../assets/icons/local_fire_department_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg");
+                position: relative;
+                top: 5px;
+            };
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    &:hover {
+        .textList_container{
+            animation-play-state: paused;
+        }
+    }
+}
+
+@keyframes textScroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
