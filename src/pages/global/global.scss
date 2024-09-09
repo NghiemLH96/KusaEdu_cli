@@ -7,3 +7,23 @@
     font-family: 'Times New Roman', Times, serif;
     position: relative;
 }
+
+.navBtn{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    box-shadow: 1px 5px 5px #987235;
+    background: linear-gradient(100deg,  #d4a862,#987235 );
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    transition: all .5s;
+    cursor: pointer;
+    color: #ffffff;
+    &:hover{
+        background-position: 0 0;
+    }
+}

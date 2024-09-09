@@ -44,7 +44,7 @@ export default function Cars() {
                                 <h3 className="carousel__title">{item.title}</h3>
                                 <hr />
                                 <p className="carousel__content">{item.content}</p>
-                                <button>{item.btnContent}</button>
+                                <button className="navBtn">{item.btnContent}</button>
                             </div>
                             <img src={item.src} alt="loading failse" />
                         </div>

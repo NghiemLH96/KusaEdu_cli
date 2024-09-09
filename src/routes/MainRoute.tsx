@@ -7,6 +7,7 @@ export default function MainRoute() {
     <Routes>
         <Route path='/' element={<Global/>}>
             <Route path='' element={<Home/>}></Route>
+            <Route path=''></Route>
         </Route>
     </Routes>
   )

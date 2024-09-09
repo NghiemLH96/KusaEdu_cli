@@ -1,5 +1,5 @@
 import "./fixedMenu.scss"
-import kusakun from "../../../../assets/icons/Kusa.png"
+import kusakun from "../../../../assets/icons/草.png"
 
 export default function FixedMenu() {
   return (

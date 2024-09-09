@@ -11,15 +11,15 @@ export default function Header() {
                 <ul className="linkList">
                     <li className={activeSM == 1 ? "linkItem active" : "linkItem"} onClick={() => { activeSM == 1 ? setActiveSM(0) : setActiveSM(1) }}>
                         <span className={activeSM == 1 ? "linkItem__line active" : "linkItem__line"}></span>
-                        JLPT
+                        Khoá Học JLPT
                         <div className={activeSM == 1 ? "subMenu active" : "subMenu"}>
                             <ul className="subMenu__container">
-                                <li className="subMenu__item">N1</li>
-                                <li className="subMenu__item">N2</li>
-                                <li className="subMenu__item">N3</li>
-                                <li className="subMenu__item">N4</li>
-                                <li className="subMenu__item">N5</li>
-                                <li className="subMenu__item">EJU</li>
+                                <li className="subMenu__item">Khoá học N1</li>
+                                <li className="subMenu__item">Khoá học N2</li>
+                                <li className="subMenu__item">Khoá học N3</li>
+                                <li className="subMenu__item">Khoá học N4</li>
+                                <li className="subMenu__item">Khoá học N5</li>
+                                <li className="subMenu__item">Khoá học EJU</li>
                             </ul>
                         </div>
                     </li>
